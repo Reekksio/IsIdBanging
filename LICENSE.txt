@@ -1,0 +1,40 @@
+IsIdBanging Freeware Licence 1.0
+Copyright (c) 2026 skellow. All rights reserved in the original IsIdBanging materials.
+
+1. Free use. You may install and use the official IsIdBanging executables and
+   VST3 plugin free of charge for personal, educational and professional audio
+   work, including creating and releasing music. No royalty is due on your audio.
+
+2. Free redistribution. You may copy and share the official, unmodified release
+   packages without charge, provided that this licence, third-party notices and
+   the applicable data licences remain with the package. You may link to the
+   official repository and releases.
+
+3. No sale. Without separate written permission from skellow, you may not sell,
+   rent, sublicense for payment, charge for access to, or include the original
+   IsIdBanging software in a paid software bundle. This restriction concerns the
+   software, not music or other audio you create using it. It does not restrict
+   rights granted independently by a third-party licence.
+
+4. Retained rights. skellow retains all rights in the original IsIdBanging code,
+   branding, interface and original synthetic profiles, except the permissions
+   expressly granted above. No ownership is transferred to recipients. The
+   application source code is not included in release 1.0.0; a possible later
+   source release does not change the terms of this release.
+
+5. Third-party components and data. This licence applies only to original
+   IsIdBanging materials. JUCE, the Steinberg VST3 SDK, codecs and other bundled
+   libraries retain their own copyrights and licences. The included ASR-derived
+   measurement data, compiled FIR data and adaptations are provided separately
+   under CC BY-NC-SA 4.0 with attribution to Audio Science Review LLC and the
+   stated contributors. Those data may be shared and adapted under that licence;
+   this software licence does not remove or replace those rights or conditions.
+   Locally imported private data remain subject to their original licences.
+
+6. No warranty. To the extent permitted by applicable law, the software is
+   provided as is, without warranties of fitness, accuracy or uninterrupted
+   operation. It is a monitoring and tonal comparison tool. Disable monitoring
+   processing before exporting a master. Mandatory statutory rights remain.
+
+Rights holder: skellow
+Official project: https://github.com/Reekksio/IsIdBanging
