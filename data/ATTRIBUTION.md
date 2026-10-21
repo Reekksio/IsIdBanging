@@ -10,10 +10,12 @@ Changes: selection of the On Axis series; linear interpolation in log frequency;
 
 FactoryProfiles.json contains transformed amplitudes, source links, hashes and a byte index. FactoryBank.bin stores little-endian float32 FIR kernels in that index order. The data can be reused or adapted under CC BY-NC-SA 4.0 independently of the application licence.
 
+The public manifest uses English translations of the workbook's descriptive attribution and licence fields. Numerical measurements, source hashes and FIR kernels are unchanged.
+
 ## Edifier R1280T
 
 - ID: SP04
-- Original measurement: Audio Science Review LLC przez Spinorama
+- Original measurement: Audio Science Review LLC via Spinorama
 - Rig: Klippel NFS
 - Source: https://github.com/pierreaubert/spinorama/blob/acc757bb98d63327092ee537bde25d9c227811f3/datas/measurements/Edifier%20R1280T/asr/CEA2034.txt
 - Original SHA-256: 033d49ca76e26901682be2a7c30ccc8fd800d5cd6fd92d76492490e28f16413e
@@ -23,7 +25,7 @@ FactoryProfiles.json contains transformed amplitudes, source links, hashes and a
 ## Ikea SYMFONISK Picture Frame
 
 - ID: SP05
-- Original measurement: Audio Science Review LLC przez Spinorama
+- Original measurement: Audio Science Review LLC via Spinorama
 - Rig: Klippel NFS
 - Source: https://github.com/pierreaubert/spinorama/blob/acc757bb98d63327092ee537bde25d9c227811f3/datas/measurements/Ikea%20SYMFONISK%20Picture%20Frame/asr/CEA2034.txt
 - Original SHA-256: a038756f3e6d2ba72ddee6a606105cb85a4d7ebf03abf08ad8c594a01c839ecb
@@ -33,7 +35,7 @@ FactoryProfiles.json contains transformed amplitudes, source links, hashes and a
 ## Apple Homepod
 
 - ID: SP06
-- Original measurement: Audio Science Review LLC przez Spinorama
+- Original measurement: Audio Science Review LLC via Spinorama
 - Rig: Klippel NFS
 - Source: https://github.com/pierreaubert/spinorama/blob/acc757bb98d63327092ee537bde25d9c227811f3/datas/measurements/Apple%20Homepod/asr/others/CEA2034.txt
 - Original SHA-256: eb2d40e3b6855b81dfdde75eee5cb21ebb93c2ca83123ffc82be8ba65b302d37

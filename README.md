@@ -1,75 +1,71 @@
-# IsIdBanging 1.0
+# IsIdBanging 1.0.0
 
-**Listen outside your bubble.** Darmowy plugin do porównywania barwy miksu na różnych rodzajach odsłuchu. Natywne **VST3 i samodzielne EXE dla Windows x64**, stworzone przez **skellow**.
+**Listen outside your bubble.** A free listening-translation plugin for comparing how a mix's tonal balance changes across playback scenarios. Available as a native **VST3 plugin and standalone Windows x64 application**.
 
-![IsIdBanging — pomiarowa charakterystyka Edifier R1280T](docs/IsIdBanging-1.0.png)
+## Download
 
-## Pobierz
+Get `IsIdBanging-1.0.0-Windows-x64.zip` from [Releases](https://github.com/Reekksio/IsIdBanging/releases/latest) and extract the entire folder. This repository contains documentation, licences and public measurement data. Application source code is not currently published.
 
-Gotowe pliki są w [Releases](https://github.com/Reekksio/IsIdBanging/releases/latest). Pobierz `IsIdBanging-1.0.0-Windows-x64.zip` i rozpakuj cały katalog. Repozytorium zawiera dokumentację i wydania binarne; kod aplikacji nie jest obecnie publikowany.
+## Standalone application
 
-## Uruchom EXE
+Open `IsIdBanging.exe`, then choose **PLAY DEMO** or **LOAD TRACK**. Supported files: WAV, AIFF, FLAC and MP3. You can also drop a file onto the window. Playback loops; tracks are limited to ten minutes. Select your output device under **Options → Audio/MIDI Settings** if needed.
 
-Otwórz `IsIdBanging.exe`, kliknij **PLAY DEMO** albo **LOAD TRACK** i wybierz WAV, AIFF, FLAC lub MP3. Plik można też przeciągnąć na okno. Odtwarzacz zapętla utwór; limit wynosi 10 minut. W razie potrzeby wybierz urządzenie wyjściowe przez **Options → Audio/MIDI Settings**.
+## Install the VST3 plugin
 
-## Zainstaluj VST3
+1. Close existing IsIdBanging instances in your DAW.
+2. Right-click **Install-VST3.cmd → Run as administrator**.
+3. The installer copies the complete bundle to `C:\Program Files\Common Files\VST3\IsIdBanging.vst3` and verifies its SHA-256 checksums.
 
-1. Zamknij instancje IsIdBanging w DAW.
-2. Kliknij prawym przyciskiem **Install-VST3.cmd → Uruchom jako administrator**.
-3. Instalator kopiuje kompletny pakiet do `C:\Program Files\Common Files\VST3\IsIdBanging.vst3` i sprawdza sumy SHA-256.
+In FL Studio, open **Options → Manage plugins**, enable **Verify plugins** and select **Find installed plugins**. For an update, also enable **Rescan previously verified plugins** and **Rescan plugins with errors**. Load **IsIdBanging** from a **Mixer effect slot → More plugins** and mark its star to add it to your favourites.
 
-W FL Studio: **Options → Manage plugins → Verify plugins → Find installed plugins**. Następnie **Mikser → slot efektu → More plugins → IsIdBanging**. Zaznacz gwiazdkę, żeby dodać go do podręcznej listy. Przy aktualizacji włącz **Rescan previously verified plugins** i **Rescan plugins with errors**. To efekt odsłuchowy, nie instrument w Channel Rack.
+FL Studio discovers VST3 plugins in standard VST3 locations. Adding a project folder to Plugin search paths is insufficient. See the [Image-Line installation guide](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_externalplugins.htm#vstfolders).
 
-FL Studio wymaga standardowej lokalizacji VST3. Samo dodanie folderu projektu w Plugin search paths nie wystarcza. [Instrukcja Image-Line](https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_externalplugins.htm#vstfolders).
+## Listening controls
 
-## Odsłuch
+- Four categories: **IN-EAR, OVER-EAR, CAR CHECK and SPEAKERS**.
+- Twelve original synthetic profiles, three in each category.
+- **MEASURED / TONAL** selects installed profiles derived from numerical frequency-response data.
+- The public package includes three measured profiles: **Edifier R1280T, IKEA SYMFONISK Picture Frame and Apple HomePod (ASR; generation unspecified)**. Their data and adapted FIR kernels are distributed separately under CC BY-NC-SA 4.0.
+- **A / ORIGINAL** and **B / SIMULATION** share the output trim. **BYPASS** also bypasses trim. **SIMULATION** sets the processed-signal blend.
+- Profile changes use a 100 ms linear fade. A newly selected inactive FIR first warms its approximately 0.69-second history while the previous profile remains audible and **PREPARING FIR** is displayed. Trim and A/B transitions are smoothed over 20 ms. All paths retain 256 samples of latency.
+- An animated 3D scene, waveform, FFT spectrum and sample-peak meters react to the audio. **FREEZE** pauses scene movement.
+- Keyboard controls: **A**, **B** and **X** for comparison and bypass; **← / →** for available profiles; **Space** for transport. Double-click a knob to restore its default. Choose **85% / 100%** to resize the interface.
+- The **GITHUB** button opens this repository.
 
-- Cztery światy: **IN-EAR, OVER-EAR, CAR CHECK, SPEAKERS**.
-- 12 oryginalnych profili syntetycznych, po trzy w każdej kategorii.
-- Lista **MEASURED / TONAL** udostępnia zainstalowane profile oparte na liczbowych charakterystykach FR.
-- Publiczna paczka zawiera trzy takie profile: **Edifier R1280T, IKEA SYMFONISK Picture Frame, Apple HomePod (ASR; generacja nieokreślona)**. Dane i ich opracowania są udostępnione osobno na CC BY-NC-SA 4.0.
-- **A / ORIGINAL** i **B / SIMULATION** zachowują wspólny trim. **BYPASS** omija także trim. **SIMULATION** reguluje udział przetworzonego sygnału.
-- Profil przechodzi w następny liniowo przez 100 ms. Nowo wybrany, nieaktywny FIR najpierw rozgrzewa historię przez około 0,69 s; w tym czasie słychać poprzedni profil i widać **PREPARING FIR**. Pozwala to ograniczyć CPU bez ucinania ogona. Trim i A/B są wygładzane przez 20 ms. Wszystkie ścieżki mają 256 próbek opóźnienia.
-- Animowana scena 3D, oscyloskop, widmo FFT i mierniki sample peak reagują na audio. **FREEZE** zatrzymuje ruch sceny.
-- **A**, **B**, **X**: porównanie i bypass. **← / →**: dostępne profile. **Spacja**: transport. Dwuklik gałki przywraca wartość domyślną. **85% / 100%**: rozmiar interfejsu.
-- Przycisk **GITHUB** otwiera oficjalne repozytorium. W stopce znajduje się **made by skellow**.
+## What measured profiles represent
 
-## Co oznaczają profile pomiarowe
+**M-FR** identifies a measured magnitude-response source. Playback is a **tonal approximation with reconstructed minimum phase**. It does not claim to reproduce a physical device exactly. **PROFILE INFO** explains each profile's source, method and reference.
 
-**M-FR** opisuje pochodzenie charakterystyki amplitudowej. Odsłuch jest **przybliżeniem barwy A**, z rekonstruowaną fazą minimalną. Nie deklarujemy fizycznej tożsamości z urządzeniem. Dane, metoda i odniesienie są opisane pod **PROFILE INFO**.
+The FIR filters use complete numerical series rather than the rounded PDF table. Separate filters are prepared for **44.1, 48, 88.2 and 96 kHz**. Speaker curves represent on-axis response normalised at 1 kHz. No invented room response or HRTF is added. Values outside the measured frequency range are held at the nearest boundary and explicitly treated as extrapolation. Missing measured phase, separate L/R responses, ANC, nonlinear dynamics and SPL are not reconstructed.
 
-Filtry FIR korzystają z pełnych serii liczbowych, a nie zaokrąglonej tabeli PDF. Przygotowano osobne filtry dla **44,1 / 48 / 88,2 / 96 kHz**. Krzywe głośników opisują on-axis względem 1 kHz; nie dodajemy do nich wymyślonego pomieszczenia ani HRTF. Poza zmierzonym zakresem utrzymywana jest wartość brzegowa, jawnie traktowana jako ekstrapolacja. Nie odtwarzamy brakującej fazy pomiarowej, kanałów L/R, ANC, nieliniowej dynamiki ani SPL.
+The application can load a private user bank from `%APPDATA%\skellow\IsIdBanging\data`. The local integration of the supplied workbook contains 25 measured curves: 22 have a compatible playback reference, while three remain inactive because reference compatibility is unverified. Raw B&K 5128, HMS II.3 and unspecified oratory1990 rig domains are kept separate. The 5128 profiles use the compatible DF 5128 reference and remain listening approximations. This private bank is excluded from public downloads; its data retain their original source terms.
 
-Program może odczytać prywatny bank użytkownika z `%APPDATA%\skellow\IsIdBanging\data`. Lokalna integracja dostarczonego arkusza obejmuje 25 krzywych: 22 mają odpowiednie odniesienie do odsłuchu, trzy pozostają nieaktywne z powodu braku potwierdzonej zgodności domeny. Surowe dane z B&K 5128, HMS II.3 i nieokreślonego stanowiska oratory1990 nie są mieszane. Profile 5128 porównywane są z odniesieniem DF 5128 i nadal mają status przybliżenia odsłuchu. Ten bank nie jest zawarty w publicznym release; uprawnienia do danych lokalnych pozostają przy ich źródłach.
+No measured responses of specific cars are included. **CAR CHECK** contains explicitly synthetic scenarios. Missing data are not replaced with a flat curve or relabelled as a newer device.
 
-Nie ma pozyskanych pomiarów konkretnych samochodów. **CAR CHECK** zawiera wyłącznie jawnie syntetyczne scenariusze. Brak danych oznacza brak danych; nie zastępujemy go zerową krzywą ani nazwą nowszego urządzenia.
+## Monitoring and export
 
-## Monitorowanie i eksport
+Use the plugin on your monitoring path. **Disable it before exporting a master.** Export Guard bypasses processing only when the host reports offline rendering; it cannot cover every real-time export. Full bypass also bypasses trim and may increase level. Meters display sample peak rather than true peak; reduce trim if clipping occurs. There is no hidden limiter.
 
-Wstaw plugin na tor odsłuchowy. **Wyłącz go przed eksportem mastera.** Export Guard pomija efekt tylko wtedy, gdy DAW zgłasza render offline; nie obejmuje każdego eksportu w czasie rzeczywistym. Pełny bypass pomija trim i może zwiększyć poziom. Mierniki pokazują sample peak, nie true peak; przy clip zmniejsz trim. Brak ukrytego limitera.
+Individual headphone calibration, calibrated SPL, BS.1770 automatic level matching and measured BRIR are outside version 1.0. File playback uses linear interpolation for sample-rate conversion; use the DAW input for critical work. Unsupported sample rates or missing required data produce clean, latency-preserving bypass. The binaries are unsigned.
 
-Korekcja własnych słuchawek, skalibrowane SPL, automatyczny gain match BS.1770 i pomiarowe BRIR nie są częścią 1.0. Odtwarzacz plików stosuje liniową interpolację przy zmianie Fs; do krytycznej pracy używaj wejścia z DAW. Nieobsługiwane Fs i brak wymaganych danych powodują czysty bypass z zachowaniem opóźnienia. Binaria nie są podpisane cyfrowo.
+## Languages and libraries
 
-## Technologie
-
-| Warstwa | Język / biblioteka |
+| Component | Technology |
 | --- | --- |
-| Wtyczka, DSP, interfejs | **C++20**, **JUCE 8.0.12** |
-| Format pluginu | **Steinberg VST3 SDK 3.8.0**, dołączony do przypiętego JUCE |
-| Filtry pomiarowe | FIR o fazie minimalnej; partycjonowany splot `juce::dsp::Convolution` |
-| Profile oryginalne | Kaskady IIR, routing stereo/mono i modelowane opóźnione odbicia |
-| Analiza i integralność | FFT, **SHA-256** z modułów JUCE |
-| Przygotowanie danych lokalnie | **Python 3**, **NumPy**, odczyt XML/XLSX bez modyfikowania arkusza |
-| Budowanie Windows | **CMake**, **MSVC / Visual Studio Build Tools**, Windows SDK |
-| Instalator | **PowerShell** i **Windows CMD** |
-| Walidacja | CTest, testy C++, **pluginval** |
+| Plugin, DSP and interface | **C++20**, **JUCE 8.0.12** |
+| Plugin format | **Steinberg VST3 SDK 3.8.0**, bundled with the pinned JUCE version |
+| Measured profiles | Minimum-phase FIR; partitioned `juce::dsp::Convolution` |
+| Original profiles | Cascaded IIR filters, stereo/mono routing and modelled delayed reflections |
+| Analysis and integrity | FFT and **SHA-256** from JUCE modules |
+| Local data preparation | **Python 3**, **NumPy**, XML/XLSX reading without modifying the workbook |
+| Windows build | **CMake**, **MSVC / Visual Studio Build Tools**, Windows SDK |
+| Installer | **PowerShell** and **Windows CMD** |
+| Validation | CTest, C++ tests and **pluginval** |
 
-JUCE jest używane w ramach warunków JUCE 8 Starter dla kwalifikującego się bezpłatnego projektu. [EULA JUCE 8](https://juce.com/legal/juce-8-licence/). Zależności i ich teksty licencji znajdują się w `licenses` oraz [NOTICE.md](NOTICE.md).
+JUCE is used under the JUCE 8 Starter terms for an eligible free project. See the [JUCE 8 EULA](https://juce.com/legal/juce-8-licence/). Dependency notices and licence texts are provided in `licenses` and [NOTICE.md](NOTICE.md).
 
-## Licencja i prawa
+## Licence and ownership
 
-**Darmowe używanie, bezpłatne udostępnianie, zakaz sprzedaży aplikacji.** skellow zachowuje prawa do oryginalnego kodu, interfejsu, marki i autorskich profili. Możesz używać programu do tworzenia i publikowania własnej muzyki, również zawodowo. Szczegóły: [LICENSE.txt](LICENSE.txt).
+**Free to use and share; sale of the application is prohibited.** The rights holder retains ownership of the original code, interface, branding and synthetic profiles. You may use the application to create and release your own music, including professionally. See [LICENSE.txt](LICENSE.txt).
 
-Biblioteki i dane osób trzecich zachowują własne licencje. Pomiary ASR i pochodne pliki FIR są na **CC BY-NC-SA 4.0**; szczegóły i atrybucja są w `data/ATTRIBUTION.md`. Licencja aplikacji nie odbiera praw wynikających z tych licencji. Repozytorium nie jest obecnie wydaniem open source; ewentualne opublikowanie kodu nastąpi osobno.
-
-**made by skellow** · [GitHub](https://github.com/Reekksio/IsIdBanging)
+Third-party libraries and data retain their own licences. ASR measurement data and adapted FIR files are licensed under **CC BY-NC-SA 4.0**; see [data/ATTRIBUTION.md](data/ATTRIBUTION.md). The application licence does not override those rights. This repository is not currently an open-source release; any future source release will be published separately.

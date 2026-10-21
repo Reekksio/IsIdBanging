@@ -10,8 +10,9 @@
 - Host reset clears FIR, IIR, reflection and PDC history. Missing data cause clean delayed bypass. Measured-profile hashes survive session save/restore.
 - Audio-file import, resampled looping playback, missing-file handling, clearing, generated demo, keyboard shortcuts, original category/preset buttons, zoom and file drop filtering.
 - Native standalone 1.0.0 starts and creates an IsIdBanging window, 1182 × 838 including wrapper controls, using the local measurement bank outside the sandbox.
-- Five native UI component snapshots, including the measured FR selector, GitHub button and made by skellow credit, rendered and inspected.
+- Five native UI component snapshots, including the measured FR selector and repository button, rendered and inspected.
 - **pluginval v1.0.4, strictness 5: SUCCESS, exit code 0**, against the final 1.0.0 VST3 bundle. Includes scan, opening, editor while processing, audio, automation, state and buses. The separate Steinberg validator was not configured.
+- FL Studio 2024 Plugin Manager 1.8.1.4285 verified the installed 1.0.0 VST3 on 21 October 2026. Its database and existing favourite entry were refreshed; the installed binary matches the validated release by SHA-256.
 
 ## Measurement preparation
 
@@ -27,6 +28,6 @@ On this development computer, a local test processed four seconds of 48 kHz ster
 
 ## Limits
 
-The earlier 0.1 installation was detected and verified by FL Studio's scanner; 1.0 preserves its VST3 class IDs and standard installation layout. Full 1.0 DAW playback matrices, macOS, physical loopback and perceptual/device reconstruction are not claimed tested. Binaries are unsigned. pluginval may emit unrelated LV2-resource warnings in the sandbox; VST3 validation succeeds.
+Version 1.0.0 preserves the earlier 0.1 VST3 class IDs and standard installation layout. The FL Studio verification above covers plugin discovery; full DAW playback matrices, macOS, physical loopback and perceptual/device reconstruction are not claimed tested. Binaries are unsigned. pluginval may emit unrelated LV2-resource warnings in the sandbox; VST3 validation succeeds.
 
 No individual headphone calibration, calibrated SPL, measured car BRIR, ANC algorithm, true-peak meter or BS.1770 automatic level matching is claimed. Disable monitor processing before exporting a master; the offline guard depends on host reporting.

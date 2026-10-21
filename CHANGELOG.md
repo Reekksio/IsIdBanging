@@ -8,7 +8,7 @@
 - Preserved the twelve original synthetic profiles and the four listening categories. Car profiles remain explicitly synthetic because no applicable car measurement was supplied.
 - Preserved 256-sample PDC for simulation, A/B and bypass, 100 ms profile fades, and existing session profile IDs.
 - Added measurement-bank and kernel SHA-256 validation and stored data identity with session state.
-- Added `made by skellow` to the interface and a GitHub repository button.
+- Added an in-app author credit and a GitHub repository button.
 - Added the freeware licence: free use and free redistribution of the original application, with sale prohibited. Third-party licences remain independent.
 - Finalised Windows x64 VST3 and standalone EXE distribution, installation instructions and release packages.
 
