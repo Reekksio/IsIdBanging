@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.2 — 2026-10-22
+
+- Replaced the separate default-styled profile window with an English dialog contained within the plugin and standalone editor.
+- Matched dialogs to the panel finish, with scrollable selectable text, centred placement, close controls and Escape support at both interface scales.
+- Translated remaining application tooltips, file-picker title and audio-loading errors into English. Legacy source notices are translated for display without changing stored data identities.
+- Prevented profile shortcuts and file drops from changing monitoring behind an open dialog; dialogs are owned and destroyed by their editor.
+- Included the interface refinements and simplified original-voicing selection introduced in 1.0.1.
+
+## 1.0.1 — 2026-10-22
+
+- Refined the native interface with a subtly textured faceplate, machined rotary controls, restrained indicator lights and clearer typography.
+- Preserved the original audio-reactive 3D scenes, waveform and spectrum rendering, listening categories, twelve original voicings and signal processing.
+- Removed the device-model selector. Keyboard profile navigation now cycles only through the twelve original voicings.
+- Preserved playback and parameter identities for previously saved device-profile sessions. Opening the revised editor does not replace an existing session's sound.
+- Retained the in-app author credit and repository button.
+
 ## 1.0.0 — 2026-10-21
 
 - Added a measured FR selector and minimum-phase FIR playback, with rate-specific filters for 44.1, 48, 88.2 and 96 kHz.

@@ -1,4 +1,4 @@
-# Third-party notices — IsIdBanging 1.0.0
+# Third-party notices — IsIdBanging 1.0.2
 
 Original IsIdBanging application materials: Copyright (c) 2026 skellow. See `LICENSE.txt` for the freeware licence. Third-party copyrights and licences are retained and are not assigned to skellow.
 
