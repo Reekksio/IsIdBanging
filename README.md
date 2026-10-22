@@ -41,8 +41,6 @@ Download the Windows ZIP from [Releases](https://github.com/Reekksio/IsIdBanging
 
 **In your DAW:** run `Install-VST3.cmd` as administrator, scan for plugins and add IsIdBanging to your monitoring path. The installer places the complete VST3 bundle in the standard Windows VST3 folder.
 
-**FL Studio:** open **Options → Manage plugins**, enable **Verify plugins** and select **Find installed plugins**. Then open a **Mixer effect slot → More plugins → IsIdBanging**.
-
 Choose a listening mode and a voicing, then use **A Original / B Simulation** to compare. **Use IsIdBanging for monitoring and disable it before exporting your master.**
 
 ## Free to use
